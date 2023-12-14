@@ -1,0 +1,37 @@
+<!-- views/display.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Display</title>
+</head>
+<body>
+  <h1>Data Display</h1>
+  
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Amount</th>
+        <th>Number of Trees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < data.length; i++) { %>
+        <tr>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].email %></td>
+          <td><%= data[i].mobile %></td>
+          <td><%= data[i].amount %></td>
+          <td><%= data[i].numberoftree %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
